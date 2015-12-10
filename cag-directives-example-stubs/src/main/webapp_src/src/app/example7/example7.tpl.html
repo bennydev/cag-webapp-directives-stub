@@ -1,0 +1,28 @@
+<div ng-controller="Example7Ctrl">
+    <form name="registerPerson2" novalidate>
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 class="block-header">Directive controllers</h4>
+
+                <p/>Funktionsanrop mellan directives.
+            </div>
+        </div>
+        <div class="input-block-container">
+            <!-- PERSONAL INFORMATION -->
+            <personal-info>
+                <person-id-seven></person-id-seven>
+                <person-name></person-name>
+            </personal-info>
+
+            <div class="row">
+                <ng-include src="'navButtons/navButtons.tpl.html'"></ng-include>
+            </div>
+            <div class="row">
+                <ng-include src="'errorMessages/errorMessages.tpl.html'"></ng-include>
+            </div>
+            <div class="row">
+                    <pre>TBD...</pre>
+            </div>
+        </div>
+    </form>
+</div>

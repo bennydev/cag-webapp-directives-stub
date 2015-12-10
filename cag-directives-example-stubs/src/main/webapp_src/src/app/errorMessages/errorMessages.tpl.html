@@ -1,0 +1,9 @@
+    <!-- template one error messages -->
+<ul class="errorMessages animate-show" ng-show="registerPersonalInformationForm.$submitted && (!isEmpty(registerPersonalInformationForm.$error))">
+    <ng-messages for="registerPersonalInformationForm.customerId.$error">
+        <li ng-message="required"><div>Personnummer är obligatoriskt</div></li>
+        <li ng-message="invalid"><div>Personnummer är inte giltigt.</div></li>
+    </ng-messages>
+
+
+</ul>

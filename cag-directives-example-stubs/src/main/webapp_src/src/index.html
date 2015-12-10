@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv_SE" ng-app="demoApp" ng-controller="AppController as appCtrl"><!-- id="ng-app" IE<8 -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <meta name="Access-Control-Allow-Origin" content="http://localhost:9090">
+    <title>CAG Directives</title>
+    <title ng-bind="appCtrl.pageTitle"></title>
+
+    <!-- not compiled CSS -->
+
+    <!-- compiled CSS -->
+    <% styles.forEach( function ( file ) { %>
+        <link rel="stylesheet" type="text/css" href="<%= file %>"/>
+    <% }); %>
+
+    <!-- compiled JavaScript -->
+    <% scripts.forEach( function ( file ) { %>
+        <script type="text/javascript" src="<%= file %>"></script>
+    <% }); %>
+
+
+</head>
+<body class="html body">
+
+
+    <section class="container main-container">
+        <header class="header fsm-header-a no-gutter" id="mainHeader" ng-include="'header/header.tpl.html'"></header>
+        <div class="row main-content" ui-view="main">
+
+        </div>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<div ng-controller="Example2Ctrl">
+    <form name="registerPerson2" novalidate>
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 class="block-header">Personnummer-exempel med directIve</h4>
+            </div>
+        </div>
+        <div class="input-block-container">
+            <!-- PERSONAL NUMBER DIRECTIVE -->
+            <person-id></person-id>
+
+            <div class="row">
+                <ng-include src="'navButtons/navButtons.tpl.html'"></ng-include>
+            </div>
+            <div class="row">
+                <ng-include src="'errorMessages/errorMessages.tpl.html'"></ng-include>
+            </div>
+            <div class="row">
+                <pre>
+                    angular.module('directives').directive('personId', [function () {
+
+                        console.log("In the directive's factory method");
+
+                        return {
+                            // No scope here, we get parent scope
+
+                            // Only as element
+                            restrict: 'E',
+                            // Replace person-id tag
+                            replace: 'true',
+                            // What to show.
+                            templateUrl: 'example2/directives/personId.tpl.html'
+                        };
+
+                    }]);
+                </pre>
+            </div>
+        </div>
+    </form>
+</div>

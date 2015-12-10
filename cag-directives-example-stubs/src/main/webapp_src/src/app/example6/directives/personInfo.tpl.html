@@ -1,0 +1,43 @@
+<div class="row input-block">
+    <div class="col-md-3">
+                    <span><label for="personIdDir"
+                                 class="mandatory"
+                    >Personnummer
+                    </label></span>
+    </div>
+    <div class="col-md-3">
+        <input type="text"
+               class="form-control"
+               id="personIdDir" name="personIdDir"
+               ng-model="person.personId"
+
+               person-id-valid-six
+               person-id="person.personId"
+        />
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label for="personName">
+                Namn
+            </label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="personName" ng-model="person.personName">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-3">
+            <transclude-pane>
+                Person id: {{person.personId}}
+            </transclude-pane>
+        </div>
+        <div class="col-md-2 col-md-offset-5">
+            <transclude-pane>
+                Name: {{person.personName}}
+            </transclude-pane>
+        </div>
+    </div>
+
+</div>
+

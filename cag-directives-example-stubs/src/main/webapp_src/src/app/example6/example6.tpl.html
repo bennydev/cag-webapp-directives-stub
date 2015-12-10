@@ -1,0 +1,26 @@
+<div ng-controller="Example6Ctrl">
+    <form name="registerPerson2" novalidate>
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 class="block-header">Transclude-exempel</h4>
+
+                <p/> Visa innehåll wrappat av transclue-directive.
+            </div>
+        </div>
+        <div class="input-block-container">
+            <!-- PERSONAL NUMBER -->
+            <person-info></person-info>
+
+            <div class="row">
+                <ng-include src="'navButtons/navButtons.tpl.html'"></ng-include>
+            </div>
+            <div class="row">
+                <ng-include src="'errorMessages/errorMessages.tpl.html'"></ng-include>
+            </div>
+            <div class="row">
+                    <pre>Due to Angular not being able to detect CDATA tags,
+                        but tries to parse the code example, it has been left out...</pre>
+            </div>
+        </div>
+    </form>
+</div>
