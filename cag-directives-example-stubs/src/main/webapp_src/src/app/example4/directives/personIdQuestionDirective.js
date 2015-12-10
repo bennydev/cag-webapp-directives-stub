@@ -1,7 +1,7 @@
 'use strict';
 angular.module('directives').directive('personIdThree', [function () {
 
-    console.log("In personIdTwo's factory method");
+    console.log("In personIdThree's factory method");
 
     return {
         restrict: 'E',
